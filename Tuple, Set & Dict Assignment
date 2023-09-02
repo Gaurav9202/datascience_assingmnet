@@ -1,0 +1,101 @@
+Q1. What are the characteristics of the tuples? Is tuple immutable?
+
+Tuples are collection of elements which are orderd and inmmutable. 
+following are the characterstics of tuples
+1. its item are indexed
+2.It can contains duplicate values
+3. It can contains all types of elements such as numbers, integer, strings,boolean values.
+
+Q2. What are the two tuple methods in python? Give an example of each method. Give a reason why
+tuples have only two in-built methods as compared to Lists.
+
+#Two tuple methods in python are count() and index()
+t=(1.2,3,3,3,3,4,4,4,5,5,5,6,6,6,1,1,2,2)
+t.count(3)
+t.index(1)
+
+# Tuples have only tow in built methods as compare to list because tuples are immutable. They connot be alterd afrer it is created
+
+
+Q3. Which collection datatypes in python do not allow duplicate items? Write a code using a set to remove
+duplicates from the given list.
+
+List = [1, 1, 1, 2, 1, 3, 1, 4, 2, 1, 2, 2, 2, 3, 2, 4, 3, 1, 3, 2, 3, 3, 3, 4, 4, 1, 4, 2, 4, 3, 4, 4]
+
+## 'set' is collection of datatype in python which donot allow duplicate items. 
+
+#To remove duplicates form the given dataset 
+
+unique_set=set(List)
+unique_set
+
+Q4. Explain the difference between the union() and update() methods for a set. Give an example of
+each method.
+
+# the main difference between the union() and update() for a set is that it create and return a new set while leaving
+# the orignal set unchanged, whereas update() changes the orignal set in place and does not return anything.
+
+a={1,2,3}
+b={3,4,5}
+
+# using update()
+a.update(b)
+
+b |= a
+
+#now 'a' and 'b' are same
+
+Q5. What is a dictionary? Give an example. Also, state whether a dictionary is ordered or unordered.
+
+# dictionary is a collection which allows data in key value pairs. where a key is unique identifier for a vlaue 
+# and value can be any data type. dictonary is ordered.
+
+# to create a dictionary of fruits and their prices
+fruits = {"apple": 0.99, "banana": 0.49, "cherry": 1.29}
+
+
+Q6. Can we create a nested dictionary? If so, please give an example by creating a simple one-level
+nested dictionary.
+
+#Yes, we can create a nested dictonary. 
+
+students = {
+    "Alice": {"Math": 90, "Science": 85, "English": 95},
+    "Bob": {"Math": 80, "Science": 75, "English": 88},
+    "Charlie": {"Math": 92, "Science": 89, "English": 91}
+}
+students
+
+# print Alice's math grade
+print(students["Alice"]["Science"]) # prints 90
+
+Q7. Using setdefault() method, create key named topics in the given dictionary and also add the value of
+the key as this list ['Python', 'Machine Learning’, 'Deep Learning']
+
+dict1 = {'language' : 'Python', 'course': 'Data Science Masters'}
+
+# use setdefault() method to create topics key and assign a list as its value
+dict1.setdefault('topics', ['Python', 'Machine Learning', 'Deep Learning'])
+
+dict1
+
+
+
+
+Q8. What are the three view objects in dictionaries? Use the three in-built methods in python to display
+these three view objects for the given dictionary.
+
+dict1 = {'Sport': 'Cricket' , 'Teams': ['India', 'Australia', 'England', 'South Africa', 'Sri Lanka', 'New Zealand']}
+
+#Three view opjects in dictionaries are 'keys', 'values' and 'items'.
+
+# display the keys view object
+dict1.keys()
+
+
+# display the values view object
+dict1.values()
+
+# display the items view obje
+dict1.items()
+
